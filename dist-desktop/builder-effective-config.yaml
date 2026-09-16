@@ -1,0 +1,21 @@
+directories:
+  output: ../dist-desktop
+  buildResources: build
+appId: com.youtubemanager.pro
+productName: YouTube Manager Pro
+mac:
+  category: public.app-category.video
+  target:
+    - dmg
+    - zip
+files:
+  - filter:
+      - main.cjs
+extraResources:
+  - from: ../backend/dist
+    to: backend/dist
+  - from: ../backend/node_modules
+    to: backend/node_modules
+  - from: ../frontend/dist
+    to: frontend/dist
+electronVersion: 34.5.8
